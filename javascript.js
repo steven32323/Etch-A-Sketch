@@ -42,10 +42,10 @@ build(16);
 
 // prompts user for size input
 sizeButton.addEventListener('click', function(){
-    let noOfSquares = prompt('How Many squares per side??');
-    if (noOfSquares < 100 && noOfSquares >= 1) {
+    let noOfSquares = prompt('How Many squares per side?? (between 2 and 48');
+    if (noOfSquares < 48 && noOfSquares >= 1) {
     build(noOfSquares);
-    } else alert("Error, input must be between 2 and 100");
+    } else alert("Error, input must be between 2 and 48");
 } )
 
 
