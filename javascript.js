@@ -10,6 +10,7 @@
 
 const container = document.querySelector('.container');
 const sizeButton = document.querySelector('.size');
+let blockColor = 'salmon'; 
 
 // function to build the grid of squares
 const build = function(columns){
@@ -30,7 +31,7 @@ for (let i = 0; i < columns ; i++){
             row.style.height = `${itemSize}px`;
             // changes color of square on hover
             row.addEventListener('mouseover', function() {
-                    row.style.backgroundColor = 'red';
+                    row.style.backgroundColor = blockColor;
             })
         }
 }
@@ -42,5 +43,11 @@ build(16);
 // prompts user for size input
 sizeButton.addEventListener('click', function(){
     let noOfSquares = prompt('How Many squares per side??');
+    if (noOfSquares < 100 && noOfSquares >= 1) {
     build(noOfSquares);
+    } else alert("Error, input must be between 2 and 100");
 } )
+
+
+// TODO: create a gradient button to slowly darken the block by 10% after every hover
+//       create a function to change the blockColor variable to a random RBG value

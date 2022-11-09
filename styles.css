@@ -11,10 +11,11 @@ body {
     margin-right: auto;
     margin-top: auto;
     border-radius: 4px;
-    /* border: 1px solid black; */
+    /* border-left: 1px solid black; */
     flex-direction: column;
     overflow: none;
     padding: 0px;
+    
 }
 .column {
     /* background-color: blue; */
@@ -38,5 +39,9 @@ body {
     width: 100%;
 }
 .hovered {
-    background-color: red;
+    background-color: red   ;
+}
+hr {
+    border-top: 3px solid black;
+    width: 100%
 }
